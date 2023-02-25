@@ -3,6 +3,19 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      favorite: 0 
+    };
+  }
+
+  addFavorites = () => {
+    this.setState({
+      favorite: this.state.favorite + 1,
+    });
+  }
+
   render() {
     return(
       <Card style={{ width: '18rem' }}>
@@ -12,14 +25,10 @@ class HornedBeast extends React.Component{
         <Card.Text>
         {this.props.description}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <p>{this.state.favorite}😻 Favorites</p>
+        <Button onClick={this.addFavorites} variant="primary">Favorite</Button>
       </Card.Body>
     </Card>
-      // <>
-      // <h2>{this.props.title}</h2>
-      // <img src={this.props.image_url} alt={this.props.description} title={this.props.keyword}></img>
-      // <p>{this.props.description}</p>
-      // </>
     )
   }
 }
