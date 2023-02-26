@@ -2,7 +2,6 @@ import React from "react";
 import HornedBeast from "./HornedBeast";
 import BeastForm from "./BeastForm";
 import "./Main.css";
-import { ListGroup } from "react-bootstrap";
 class Main extends React.Component {
  
   render() {
@@ -11,7 +10,7 @@ class Main extends React.Component {
       
       return (
         <>
-          <ListGroup>
+          
             <HornedBeast
               _id={beast._id}
               title={beast.title}
@@ -22,7 +21,7 @@ class Main extends React.Component {
               selectedBeast={this.props.selectedBeast}
               key={idx}
             />
-          </ListGroup>
+      
         </>
       );
     });

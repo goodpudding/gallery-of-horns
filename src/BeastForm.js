@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {ListGroup, Button, Form} from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
 class BeastForm extends React.Component{
 
   constructor(props) {
