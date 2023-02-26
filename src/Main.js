@@ -1,11 +1,10 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-import './Main.css'
+import "./Main.css";
 class Main extends React.Component {
   render() {
-    let beasts = [];
-    this.props.data.forEach((beast, idx) => {
-      beasts.push(
+    let beasts = this.props.data.map((beast, idx) => {
+      return (
         <HornedBeast
           _id={beast._id}
           title={beast.title}

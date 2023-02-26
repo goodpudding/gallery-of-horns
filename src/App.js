@@ -38,8 +38,10 @@ class App extends React.Component{
   constructor(props) {
     super(props)
     this.state ={
-    showModal: true,
-    beastName: ''
+    showModal: false,
+    beastName: '',
+    beastURL: '',
+    beastInfo: ''
     }
   }
 
@@ -49,10 +51,12 @@ class App extends React.Component{
     })
   }
 
-  selectedBeast = (name) => {
+  selectedBeast =  (name, img, description) => {
     this.setState({
       showModal: true,
       beastName: name,
+      beastURL: img,
+      beastInfo: description
     })
   }
 
@@ -69,21 +73,13 @@ class App extends React.Component{
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>
-            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-            ipsam atque a dolores quisquam quisquam adipisci possimus
-            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-            deleniti rem!
-          </p>
+          <img src ={this.state.beastURL} alt={this.state.beastInfo} width='100%' height='100%' ></img>
+          <p>{this.state.beastInfo}</p>
         </Modal.Body>
-
-
       </Modal>
       </>
       )
+      
   }
 
 }
