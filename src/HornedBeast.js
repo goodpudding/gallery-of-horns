@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import {Button, Card} from 'react-bootstrap';
 
 class HornedBeast extends React.Component{
   constructor(props) {
@@ -17,8 +16,8 @@ class HornedBeast extends React.Component{
   }
 
   passBeastName = () =>{
+    this.addFavorites();
     this.props.selectedBeast(this.props.title, this.props.image_url, this.props.description)
-    console.log(this.props.image_url)
   }
 
   render() { 
