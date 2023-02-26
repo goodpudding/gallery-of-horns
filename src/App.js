@@ -25,22 +25,63 @@
 // export default App;
 
 import React from 'react';
-import Main from './Main.js';
 import Header from './Header.js';
+import Main from './Main.js';
 import Footer from './Footer.js';
-import './App.css';
 import data from './data.json';
+import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 
 class App extends React.Component{
-  
+  constructor(props) {
+    super(props)
+    this.state ={
+    showModal: true,
+    beastName: ''
+    }
+  }
+
+  handleCloseModal = () => {
+    this.setState({
+      showModal: false,
+    })
+  }
+
+  selectedBeast = (name) => {
+    this.setState({
+      showModal: true,
+      beastName: name,
+    })
+  }
+
   render() {
     return (
       <>
       <Header/>
-      <Main data={data}/>
+      <Main data={data} selectedBeast={this.selectedBeast}/>
       <Footer/>
+      <Modal show={this.state.showModal} onHide={this.handleCloseModal}>
+      <Modal.Header closeButton>
+          <Modal.Title id="example-custom-modal-styling-title">
+            {this.state.beastName}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
+            commodi aspernatur enim, consectetur. Cumque deleniti temporibus
+            ipsam atque a dolores quisquam quisquam adipisci possimus
+            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
+            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
+            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
+            deleniti rem!
+          </p>
+        </Modal.Body>
+
+
+      </Modal>
       </>
       )
   }

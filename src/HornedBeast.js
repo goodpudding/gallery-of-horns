@@ -16,11 +16,15 @@ class HornedBeast extends React.Component{
     });
   }
 
-  render() {
+  passBeastName = () =>{
+    this.props.selectedBeast(this.props.title)
+  }
+
+  render() { 
     return(
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.keyword} width='300' height='200' />
-      <Card.Body>
+      <Card.Img  variant="top" src={this.props.image_url} alt={this.props.description} title={this.props.keyword} width='300' height='200' />
+      <Card.Body onClick={this.passBeastName}>
         <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>
         {this.props.description}

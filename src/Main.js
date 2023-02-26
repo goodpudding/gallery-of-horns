@@ -13,6 +13,7 @@ class Main extends React.Component {
           description={beast.description}
           keyword={beast.keyword}
           horns={beast.horns}
+          selectedBeast={this.props.selectedBeast}
           key={idx}
         />
       );
