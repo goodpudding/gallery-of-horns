@@ -35,7 +35,7 @@ class BeastForm extends React.Component{
                 <option value="1">1 Horn</option>
                 <option value="2">2 Horns</option>
                 <option value="3">3 Horns</option>
-                <option value="4">4 or more Horns</option>
+                <option value="100">4 or more Horns</option>
               </Form.Select>
             </Form.Label>
             <Button type="submit">Submit</Button>
