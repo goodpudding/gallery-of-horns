@@ -83,15 +83,15 @@ Actual time needed to complete: ~45 mins. The reason it took so long was because
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Number and name of feature: ________________________________
+Number and name of feature:Feature #2: Allow Users to Favorite Individual Beasts
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 mins
 
-Start time: _____
+Start time: 3:50pm
 
-Finish time: _____
+Finish time: 4:14pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 24 mins
 
 
 -----------------------------------------------Template---------------------------------------------------------------
