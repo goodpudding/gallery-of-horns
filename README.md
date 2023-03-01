@@ -94,6 +94,19 @@ Finish time: 4:14pm
 Actual time needed to complete: 24 mins
 
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Number and name of feature:  Display a Modal
+
+Estimate of time needed to complete: 1.5hrs
+
+Start time: 2:18pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+
 -----------------------------------------------Template---------------------------------------------------------------
 Number and name of feature: ________________________________
 
