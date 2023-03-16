@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {ListGroup, Button, Form} from 'react-bootstrap';
+import {Button, Form} from 'react-bootstrap';
 class BeastForm extends React.Component{
 
   constructor(props) {
@@ -17,7 +17,6 @@ class BeastForm extends React.Component{
     this.setState({
       selectedValue: parseInt(e.target.value),
     })
-    console.log(typeof e.target.value);
   }
 
   handleSubmit = (e) => {
@@ -32,6 +31,7 @@ class BeastForm extends React.Component{
            
             <Form.Label>Select Number of Horns
               <Form.Select name="selected" onChange={this.handleChange} value={this.state.selected}>
+                <option value="0">All</option>
                 <option value="1">1 Horn</option>
                 <option value="2">2 Horns</option>
                 <option value="3">3 Horns</option>
