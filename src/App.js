@@ -1,29 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
 import Header from "./Header.js";
 import BeastForm from "./BeastForm";
@@ -42,7 +16,7 @@ class App extends React.Component {
       beastName: "",
       beastURL: "",
       beastInfo: "",
-      amountOfHorns: 1,
+      amountOfHorns: 0,
       filteredHornedBeasts: [],
       filteredData: data,
     };
@@ -68,21 +42,34 @@ class App extends React.Component {
   };
 
   handleFilter = (horns) => {
-    this.setState({
-      amountOfHorns: horns,
-    });
-    console.log("handlefilterwascalledinAppJS", horns);
-  };
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.amountOfHorns !== prevState.amountOfHorns) {
-      const filter= data.filter(hornedBeast => hornedBeast['horns'] === this.state.amountOfHorns);
+    console.log(horns);
+    if (horns === 1) {
+      const filter = data.filter((hornedBeast) => hornedBeast.horns === 1);
       this.setState({
         filteredHornedBeasts: filter,
-
-      })
+      });
+    } else if (horns === 2) {
+      const filter = data.filter((hornedBeast) => hornedBeast.horns === 2);
+      this.setState({
+        filteredHornedBeasts: filter,
+      });
+    } else if (horns === 3) {
+      const filter = data.filter((hornedBeast) => hornedBeast.horns === 3);
+      this.setState({
+        filteredHornedBeasts: filter,
+      });
+    } else if (horns === 100) {
+      const filter = data.filter((hornedBeast) => hornedBeast.horns === 100);
+      this.setState({
+        filteredHornedBeasts: filter,
+      });
+    } else {
+      this.setState({
+        filteredHornedBeasts: data,
+      });
     }
-  }
+ 
+  };
 
   render() {
     return (
@@ -97,7 +84,7 @@ class App extends React.Component {
         <Footer />
         <Modal show={this.state.showModal} onHide={this.handleCloseModal}>
           <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title">
+            <Modal.Title id={this.state._id}>
               {this.state.beastName}
             </Modal.Title>
           </Modal.Header>
